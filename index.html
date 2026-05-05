@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yona Namibe — Hotel em Moçâmedes, Angola</title>
+  <meta name="description" content="Conforto moderno entre o deserto e o Atlântico. O Yona Namibe é um hotel premium em Moçâmedes, Angola, para lazer, negócios e eventos." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===========================
+       HEADER
+  =========================== -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner">
+
+      <a href="#inicio" class="header__logo" aria-label="Yona Namibe — Início">
+        <span class="logo__main">Yona</span>
+        <span class="logo__sub">Namibe</span>
+      </a>
+
+      <nav class="header__nav" id="desktopNav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio"       class="nav__link">Início</a></li>
+          <li><a href="#quartos"      class="nav__link">Quartos</a></li>
+          <li><a href="#experiencias" class="nav__link">Experiências</a></li>
+          <li><a href="#eventos"      class="nav__link">Eventos</a></li>
+          <li><a href="#restaurante"  class="nav__link">Restaurante</a></li>
+          <li><a href="#galeria"      class="nav__link">Galeria</a></li>
+          <li><a href="#contacto"     class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__cta">
+        <a href="#reserva" class="btn btn--gold btn--sm">Reservar</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <nav aria-label="Navegação mobile">
+        <ul class="mobile-nav__list">
+          <li><a href="#inicio"       class="mobile-nav__link">Início</a></li>
+          <li><a href="#quartos"      class="mobile-nav__link">Quartos</a></li>
+          <li><a href="#experiencias" class="mobile-nav__link">Experiências</a></li>
+          <li><a href="#eventos"      class="mobile-nav__link">Eventos</a></li>
+          <li><a href="#restaurante"  class="mobile-nav__link">Restaurante</a></li>
+          <li><a href="#galeria"      class="mobile-nav__link">Galeria</a></li>
+          <li><a href="#contacto"     class="mobile-nav__link">Contacto</a></li>
+          <li><a href="#reserva"      class="mobile-nav__link mobile-nav__link--cta">Reservar agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===========================
+         HERO
+    =========================== -->
+    <section class="hero" id="inicio" aria-label="Secção principal">
+
+      <!-- Background -->
+      <div class="hero__bg">
+        <img
+          src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=85"
+          alt="Vista panorâmica de resort com piscina e oceano ao fundo"
+          class="hero__img"
+        />
+        <div class="hero__overlay"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="hero__label" id="heroLabel">Moçâmedes · Namibe · Angola</p>
+
+          <h1 class="hero__title" id="heroTitle">
+            <em>Yona Namibe</em>
+          </h1>
+
+          <p class="hero__headline" id="heroHeadline">
+            Conforto moderno entre<br />o deserto e o Atlântico.
+          </p>
+
+          <p class="hero__sub" id="heroSub">
+            Em Moçâmedes, o Yona Namibe recebe hóspedes de lazer, negócios e eventos com quartos confortáveis, restaurante, piscinas, espaços desportivos e ambientes preparados para momentos memoráveis.
+          </p>
+
+          <div class="hero__actions" id="heroActions">
+            <a href="#reserva"  class="btn btn--gold btn--lg">Reservar agora</a>
+            <a href="#sobre"    class="btn btn--ghost btn--lg">Explorar o hotel</a>
+          </div>
+        </div>
+
+        <!-- Floating info card -->
+        <div class="hero__card" id="heroCard" aria-label="Informações rápidas">
+          <div class="hero__card-item">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+            <span>Moçâmedes, Namibe</span>
+          </div>
+          <div class="hero__card-sep"></div>
+          <div class="hero__card-item">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm1 14h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span>Hotel para lazer e negócios</span>
+          </div>
+          <div class="hero__card-sep"></div>
+          <div class="hero__card-item">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+            <span>Eventos e conferências</span>
+          </div>
+          <div class="hero__card-sep"></div>
+          <div class="hero__card-item">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7V5c0-.55-.45-1-1-1zm-5 8c0 1.1-.9 2-2 2s-2-.9-2-2V7h4v4zm6.5 1c0 3.31-2.69 6-6 6H10c-3.31 0-6-2.69-6-6V20h20v-8h-4z"/></svg>
+            <span>Piscinas e restaurante</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-bar"></div>
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         SOBRE
+    =========================== -->
+    <section class="about section" id="sobre">
+      <div class="container">
+        <div class="about__inner">
+
+          <div class="about__img-wrap reveal-left">
+            <img
+              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=85"
+              alt="Interior elegante do hotel Yona Namibe com luz natural"
+              class="about__img"
+            />
+            <div class="about__img-accent"></div>
+            <div class="about__img-badge">
+              <span>Est.</span>
+              <strong>Namibe</strong>
+            </div>
+          </div>
+
+          <div class="about__content reveal-right">
+            <p class="section__label">Sobre o Hotel</p>
+            <h2 class="section__title">Um refúgio moderno<br />no coração do Namibe.</h2>
+            <p class="about__text">
+              O Yona Namibe combina conforto contemporâneo, hospitalidade cuidada e uma localização privilegiada em Moçâmedes. Entre o silêncio dourado do deserto e a brisa do Atlântico, cada estadia é pensada para descanso, trabalho e descoberta.
+            </p>
+
+            <div class="about__features">
+              <div class="about__feat">
+                <span class="feat__ico">🛏️</span>
+                <span class="feat__label">Quartos modernos</span>
+              </div>
+              <div class="about__feat">
+                <span class="feat__ico">🍽️</span>
+                <span class="feat__label">Restaurante e bar</span>
+              </div>
+              <div class="about__feat">
+                <span class="feat__ico">🏊</span>
+                <span class="feat__label">Piscinas</span>
+              </div>
+              <div class="about__feat">
+                <span class="feat__ico">🏛️</span>
+                <span class="feat__label">Espaços para eventos</span>
+              </div>
+              <div class="about__feat">
+                <span class="feat__ico">⚡</span>
+                <span class="feat__label">Desporto e lazer</span>
+              </div>
+              <div class="about__feat">
+                <span class="feat__ico">📍</span>
+                <span class="feat__label">Localização estratégica</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         QUARTOS
+    =========================== -->
+    <section class="rooms section section--navy" id="quartos">
+      <div class="container">
+
+        <div class="section__header reveal-up">
+          <p class="section__label section__label--gold">Quartos &amp; Suítes</p>
+          <h2 class="section__title section__title--light">Conforto pensado para si.</h2>
+          <p class="section__desc section__desc--light">Cada quarto do Yona Namibe foi desenhado para oferecer descanso, funcionalidade e uma experiência que fica na memória.</p>
+        </div>
+
+        <div class="rooms__grid">
+
+          <!-- Suite Executiva -->
+          <article class="room-card stagger-card" aria-label="Suíte Executiva">
+            <div class="room-card__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=85"
+                alt="Suíte Executiva — cama king e área de trabalho elegante"
+                class="room-card__img"
+              />
+              <span class="room-card__badge">Premium</span>
+              <div class="room-card__img-overlay"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Suíte Executiva</h3>
+              <p class="room-card__desc">Um espaço amplo e sofisticado para quem procura privacidade, conforto e uma experiência superior.</p>
+              <div class="room-card__tags">
+                <span class="tag">Cama confortável</span>
+                <span class="tag">Área de trabalho</span>
+                <span class="tag">Wi-Fi</span>
+                <span class="tag">Negócios</span>
+              </div>
+              <button class="btn btn--ghost-dark room-card__btn" onclick="scrollToSection('reserva')">Ver detalhes</button>
+            </div>
+          </article>
+
+          <!-- Standard Single -->
+          <article class="room-card stagger-card" aria-label="Quarto Standard Single">
+            <div class="room-card__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=85"
+                alt="Quarto Standard Single — moderno e funcional"
+                class="room-card__img"
+              />
+              <div class="room-card__img-overlay"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Quarto Standard Single</h3>
+              <p class="room-card__desc">Funcional, elegante e tranquilo. Perfeito para viajantes individuais e estadias profissionais.</p>
+              <div class="room-card__tags">
+                <span class="tag">Conforto</span>
+                <span class="tag">Wi-Fi</span>
+                <span class="tag">Ar-condicionado</span>
+                <span class="tag">Descanso</span>
+              </div>
+              <button class="btn btn--ghost-dark room-card__btn" onclick="scrollToSection('reserva')">Ver detalhes</button>
+            </div>
+          </article>
+
+          <!-- Standard Duplo -->
+          <article class="room-card stagger-card" aria-label="Quarto Standard Duplo">
+            <div class="room-card__img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=85"
+                alt="Quarto Standard Duplo — acolhedor e moderno"
+                class="room-card__img"
+              />
+              <div class="room-card__img-overlay"></div>
+            </div>
+            <div class="room-card__body">
+              <h3 class="room-card__title">Quarto Standard Duplo</h3>
+              <p class="room-card__desc">Pensado para casais, amigos ou pequenas famílias que desejam relaxar com conforto em Moçâmedes.</p>
+              <div class="room-card__tags">
+                <span class="tag">Duas pessoas</span>
+                <span class="tag">Acolhedor</span>
+                <span class="tag">Lazer</span>
+                <span class="tag">Moderno</span>
+              </div>
+              <button class="btn btn--ghost-dark room-card__btn" onclick="scrollToSection('reserva')">Ver detalhes</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         EXPERIÊNCIAS
+    =========================== -->
+    <section class="experiences section" id="experiencias">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <p class="section__label">Experiências</p>
+          <h2 class="section__title">Mais do que uma estadia,<br />uma experiência no sul de Angola.</h2>
+        </div>
+
+        <div class="exp__grid">
+
+          <article class="exp-card stagger-card">
+            <div class="exp-card__bg">
+              <img
+                src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=800&q=85"
+                alt="Piscina do hotel com vista para a natureza"
+              />
+              <div class="exp-card__overlay"></div>
+            </div>
+            <div class="exp-card__content">
+              <div class="exp-card__number">01</div>
+              <h3 class="exp-card__title">Piscina e descanso</h3>
+              <p class="exp-card__text">Dias tranquilos, água aquecida e ambiente perfeito para relaxar.</p>
+            </div>
+          </article>
+
+          <article class="exp-card stagger-card">
+            <div class="exp-card__bg">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85"
+                alt="Restaurante premium com iluminação elegante"
+              />
+              <div class="exp-card__overlay"></div>
+            </div>
+            <div class="exp-card__content">
+              <div class="exp-card__number">02</div>
+              <h3 class="exp-card__title">Restaurante e sabores</h3>
+              <p class="exp-card__text">Refeições cuidadas, ambiente elegante e momentos à mesa com sabor local.</p>
+            </div>
+          </article>
+
+          <article class="exp-card stagger-card">
+            <div class="exp-card__bg">
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                alt="Ginásio e espaços desportivos modernos"
+              />
+              <div class="exp-card__overlay"></div>
+            </div>
+            <div class="exp-card__content">
+              <div class="exp-card__number">03</div>
+              <h3 class="exp-card__title">Desporto e movimento</h3>
+              <p class="exp-card__text">Espaços para ginásio, padel, ténis, voleibol de praia e lazer ativo.</p>
+            </div>
+          </article>
+
+          <article class="exp-card stagger-card">
+            <div class="exp-card__bg">
+              <img
+                src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=800&q=85"
+                alt="Paisagem do deserto do Namibe ao pôr do sol"
+              />
+              <div class="exp-card__overlay"></div>
+            </div>
+            <div class="exp-card__content">
+              <div class="exp-card__number">04</div>
+              <h3 class="exp-card__title">Namibe e natureza</h3>
+              <p class="exp-card__text">Descubra a beleza entre o Atlântico, o deserto e as paisagens únicas de Moçâmedes.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         EVENTOS
+    =========================== -->
+    <section class="events section" id="eventos">
+      <div class="container">
+        <div class="events__inner">
+
+          <div class="events__content reveal-left">
+            <p class="section__label">Eventos &amp; Conferências</p>
+            <h2 class="section__title">Eventos com estrutura,<br />elegância e tranquilidade.</h2>
+            <p class="events__text">
+              De reuniões privadas a conferências empresariais, o Yona Namibe oferece ambientes preparados para receber equipas, instituições, formações, celebrações e encontros memoráveis.
+            </p>
+
+            <ul class="events__list" aria-label="Tipos de eventos">
+              <li><span class="events__bullet"></span>Conferências corporativas</li>
+              <li><span class="events__bullet"></span>Reuniões privadas</li>
+              <li><span class="events__bullet"></span>Coffee breaks</li>
+              <li><span class="events__bullet"></span>Banquetes</li>
+              <li><span class="events__bullet"></span>Formações</li>
+              <li><span class="events__bullet"></span>Eventos sociais</li>
+              <li><span class="events__bullet"></span>Business center</li>
+            </ul>
+
+            <a href="#contacto" class="btn btn--gold">Solicitar proposta</a>
+          </div>
+
+          <div class="events__img-wrap reveal-right">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=85"
+              alt="Sala de conferências moderna com iluminação profissional"
+              class="events__img"
+            />
+            <div class="events__img-accent"></div>
+            <div class="events__stats">
+              <div class="stat">
+                <strong>8+</strong>
+                <span>Salas</span>
+              </div>
+              <div class="stat">
+                <strong>200+</strong>
+                <span>Capacidade</span>
+              </div>
+              <div class="stat">
+                <strong>AV</strong>
+                <span>Equipamento</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         RESTAURANTE
+    =========================== -->
+    <section class="restaurant section section--cream" id="restaurante">
+      <div class="container">
+
+        <div class="section__header reveal-up">
+          <p class="section__label">Restaurante &amp; Bar</p>
+          <h2 class="section__title">Sabores, encontros<br />e momentos à mesa.</h2>
+          <p class="section__desc">
+            O restaurante do Yona Namibe foi pensado para pequenos-almoços tranquilos, refeições em família, encontros de trabalho e finais de tarde com a leveza da costa.
+          </p>
+        </div>
+
+        <div class="restaurant__grid">
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=85" alt="Mesa de pequeno-almoço com frutas frescas" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">01</span>
+              <h3>Pequeno-almoço</h3>
+              <p>Início de dia tranquilo com sabores frescos e locais.</p>
+            </div>
+          </div>
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=85" alt="Prato elegante de refeição principal" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">02</span>
+              <h3>Almoço e jantar</h3>
+              <p>Cozinha local e internacional com ingredientes selecionados.</p>
+            </div>
+          </div>
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=600&q=85" alt="Bar com cocktails e iluminação elegante" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">03</span>
+              <h3>Bar</h3>
+              <p>Cocktails, bebidas frescas e ambiente descontraído.</p>
+            </div>
+          </div>
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=85" alt="Esplanada ao ar livre com vista panorâmica" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">04</span>
+              <h3>Esplanada</h3>
+              <p>Refeições ao ar livre com a brisa e a luz de Moçâmedes.</p>
+            </div>
+          </div>
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1447279506476-3faec8071eee?auto=format&fit=crop&w=600&q=85" alt="Mesa de coffee break com bolos e café" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">05</span>
+              <h3>Coffee break</h3>
+              <p>Intervalos de reuniões com café, snacks e convívio.</p>
+            </div>
+          </div>
+
+          <div class="rest-card stagger-card">
+            <div class="rest-card__img">
+              <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=85" alt="Jantar privado com decoração elegante" />
+            </div>
+            <div class="rest-card__body">
+              <span class="rest-card__num">06</span>
+              <h3>Eventos privados</h3>
+              <p>Jantas de gala, celebrações e momentos especiais.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         DESTINO NAMIBE
+    =========================== -->
+    <section class="destination section" id="namibe">
+      <div class="destination__bg">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=85"
+          alt="Costa atlântica com praia dourada e oceano azul profundo"
+          class="destination__bg-img"
+        />
+        <div class="destination__overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="destination__header reveal-up">
+          <p class="section__label section__label--gold">Namibe como Destino</p>
+          <h2 class="section__title section__title--light">Onde o deserto<br />encontra o mar.</h2>
+          <p class="destination__intro">
+            Namibe é uma terra de contrastes raros. O azul do Atlântico, o silêncio do deserto, a luz dourada de Moçâmedes e a cultura costeira criam uma experiência que fica na memória.
+          </p>
+        </div>
+
+        <div class="destination__grid">
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">🌅</div>
+            <h3>Fim de semana no Namibe</h3>
+            <p>Dois dias de paisagem, descanso e descoberta.</p>
+          </div>
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">💑</div>
+            <h3>Viagem romântica</h3>
+            <p>O ambiente perfeito para momentos a dois.</p>
+          </div>
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">💼</div>
+            <h3>Retiro empresarial</h3>
+            <p>Ambientes modernos para equipas e decisões importantes.</p>
+          </div>
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">📸</div>
+            <h3>Turismo e fotografia</h3>
+            <p>Paisagens únicas no sul de Angola para explorar e retratar.</p>
+          </div>
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">👨‍👩‍👧</div>
+            <h3>Família e lazer</h3>
+            <p>Conforto e animação para toda a família.</p>
+          </div>
+          <div class="dest-card stagger-card">
+            <div class="dest-card__ico">🏺</div>
+            <h3>Descoberta cultural</h3>
+            <p>A história, a gastronomia e a gente de Moçâmedes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         GALERIA
+    =========================== -->
+    <section class="gallery section" id="galeria">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <p class="section__label">Galeria</p>
+          <h2 class="section__title">O Yona Namibe em imagens.</h2>
+        </div>
+
+        <div class="gallery__grid">
+          <div class="gallery__item gallery__item--wide stagger-card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85" alt="Piscina do hotel com vista para a natureza" />
+            <div class="gallery__caption">Piscina</div>
+          </div>
+          <div class="gallery__item gallery__item--tall stagger-card">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=85" alt="Suíte executiva com decoração premium" />
+            <div class="gallery__caption">Suíte Executiva</div>
+          </div>
+          <div class="gallery__item stagger-card">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=85" alt="Restaurante com ambiente elegante" />
+            <div class="gallery__caption">Restaurante</div>
+          </div>
+          <div class="gallery__item stagger-card">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=85" alt="Hall e interior do hotel" />
+            <div class="gallery__caption">Interior</div>
+          </div>
+          <div class="gallery__item stagger-card">
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=600&q=85" alt="Deserto do Namibe ao entardecer" />
+            <div class="gallery__caption">Deserto do Namibe</div>
+          </div>
+          <div class="gallery__item gallery__item--wide stagger-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85" alt="Praia dourada da costa atlântica" />
+            <div class="gallery__caption">Costa Atlântica</div>
+          </div>
+          <div class="gallery__item stagger-card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=85" alt="Sala de conferências corporativas" />
+            <div class="gallery__caption">Conferências</div>
+          </div>
+          <div class="gallery__item stagger-card">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=85" alt="Quarto duplo com cama confortável" />
+            <div class="gallery__caption">Quartos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         RESERVA
+    =========================== -->
+    <section class="booking section" id="reserva">
+      <div class="container">
+        <div class="booking__inner">
+
+          <div class="booking__info reveal-left">
+            <p class="section__label">Reservas</p>
+            <h2 class="section__title">Planeie<br />a sua estadia.</h2>
+            <p class="booking__text">
+              Preencha o formulário ao lado e entraremos em contacto brevemente para confirmar a sua reserva e responder a todas as dúvidas.
+            </p>
+
+            <div class="booking__highlights">
+              <div class="booking__hi">
+                <strong>Check-in</strong>
+                <span>A partir das 14h00</span>
+              </div>
+              <div class="booking__hi">
+                <strong>Check-out</strong>
+                <span>Até às 12h00</span>
+              </div>
+              <div class="booking__hi">
+                <strong>Estacionamento</strong>
+                <span>Gratuito</span>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/244947478804?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20Yona%20Namibe."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--whatsapp"
+              aria-label="Reservar via WhatsApp"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Reservar via WhatsApp
+            </a>
+          </div>
+
+          <div class="booking__form-wrap reveal-right">
+            <form class="booking__form" id="bookingForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nome">Nome completo</label>
+                  <input type="text" id="nome" name="nome" placeholder="O seu nome" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="telefone">Telefone / WhatsApp</label>
+                  <input type="tel" id="telefone" name="telefone" placeholder="+244 9XX XXX XXX" autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required autocomplete="email" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="checkin">Check-in</label>
+                  <input type="date" id="checkin" name="checkin" />
+                </div>
+                <div class="form-group">
+                  <label for="checkout">Check-out</label>
+                  <input type="date" id="checkout" name="checkout" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="hospedes">Nº de hóspedes</label>
+                  <select id="hospedes" name="hospedes">
+                    <option value="">Selecionar</option>
+                    <option value="1">1 hóspede</option>
+                    <option value="2">2 hóspedes</option>
+                    <option value="3">3 hóspedes</option>
+                    <option value="4+">4 ou mais</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="quarto">Tipo de quarto</label>
+                  <select id="quarto" name="quarto">
+                    <option value="">Selecionar</option>
+                    <option value="suite">Suíte Executiva</option>
+                    <option value="single">Standard Single</option>
+                    <option value="duplo">Standard Duplo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem adicional</label>
+                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Pedidos especiais, informações adicionais..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--gold btn--full">
+                Enviar pedido de reserva
+              </button>
+            </form>
+
+            <!-- Mensagem de sucesso (oculta inicialmente) -->
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              <div class="form-success__check">✓</div>
+              <h3>Pedido enviado com sucesso!</h3>
+              <p>Pedido preparado com sucesso. Em uma versão final, esta informação será enviada para o WhatsApp, email ou painel do hotel.</p>
+              <a
+                href="https://wa.me/244947478804?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20Yona%20Namibe."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--gold"
+              >Confirmar pelo WhatsApp</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         FAQ
+    =========================== -->
+    <section class="faq section section--navy" id="faq">
+      <div class="container">
+        <div class="faq__inner">
+
+          <div class="faq__header reveal-up">
+            <p class="section__label section__label--gold">FAQ</p>
+            <h2 class="section__title section__title--light">Perguntas frequentes.</h2>
+          </div>
+
+          <div class="faq__list" id="faqList">
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>Qual é o horário de check-in?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>O check-in é a partir das 14h. Para chegadas antecipadas, entre em contacto connosco com antecedência e faremos o possível para acomodar.</p>
+              </div>
+            </div>
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>Qual é o horário de check-out?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>O check-out é até às 12h. Late check-out sujeito a disponibilidade e acordo com a recepção.</p>
+              </div>
+            </div>
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>O hotel tem estacionamento?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>Sim, o hotel dispõe de estacionamento para hóspedes, sem custo adicional.</p>
+              </div>
+            </div>
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>O hotel recebe eventos?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>Sim, o Yona Namibe dispõe de espaços preparados para reuniões, conferências, banquetes e eventos sociais. Contacte-nos para uma proposta personalizada.</p>
+              </div>
+            </div>
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>O hotel tem restaurante?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>Sim, o hotel conta com restaurante, bar e áreas de convivência. Servimos pequeno-almoço, almoço e jantar diariamente.</p>
+              </div>
+            </div>
+
+            <div class="faq__item stagger-card">
+              <button class="faq__q" aria-expanded="false">
+                <span>Posso fazer reserva pelo WhatsApp?</span>
+                <span class="faq__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="faq__a">
+                <p>Sim, pode contactar-nos diretamente pelo WhatsApp <strong>+244 947 478 804</strong>. A equipa responde rapidamente e ajuda com todos os detalhes da sua reserva.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===========================
+         CONTACTO
+    =========================== -->
+    <section class="contact section" id="contacto">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="contact__info reveal-left">
+            <p class="section__label">Contacto</p>
+            <h2 class="section__title">Fale com<br />o Yona Namibe.</h2>
+
+            <div class="contact__items">
+              <div class="contact__item">
+                <div class="contact__item-ico">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+                </div>
+                <div>
+                  <strong>Localização</strong>
+                  <span>Moçâmedes, Namibe, Angola</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-ico">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <div>
+                  <strong>Telefone / WhatsApp</strong>
+                  <span>+244 947 478 804</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-ico">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <span>recepcao.namibe@yonahoteis.com</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-ico">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>@yona.hoteis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__btns">
+              <a href="https://wa.me/244947478804?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20Yona%20Namibe." target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">WhatsApp</a>
+              <a href="mailto:recepcao.namibe@yonahoteis.com" class="btn btn--outline">Email</a>
+              <a href="https://maps.google.com/?q=Moçâmedes,+Namibe,+Angola" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Ver localização</a>
+            </div>
+          </div>
+
+          <div class="contact__map reveal-right">
+            <div class="map-mock" role="img" aria-label="Mapa da localização do hotel em Moçâmedes">
+              <div class="map-mock__grid"></div>
+              <div class="map-mock__pin">
+                <div class="map-mock__pin-dot"></div>
+                <div class="map-mock__label">
+                  <strong>Yona Namibe</strong>
+                  <span>Moçâmedes, Angola</span>
+                </div>
+              </div>
+              <a href="https://maps.google.com/?q=Moçâmedes,+Namibe,+Angola" target="_blank" rel="noopener noreferrer" class="btn btn--gold map-mock__btn">Ver no Google Maps</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ===========================
+       FOOTER
+  =========================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo" aria-label="Yona Namibe — Início">
+            <span class="logo__main">Yona</span>
+            <span class="logo__sub">Namibe</span>
+          </a>
+          <p class="footer__tagline">Hotel moderno em Moçâmedes, criado para estadias de lazer, negócios e eventos.</p>
+          <div class="footer__socials">
+            <a href="https://wa.me/244947478804" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:recepcao.namibe@yonahoteis.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="https://instagram.com/yona.hoteis" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__links">
+          <h4 class="footer__heading">Navegação</h4>
+          <ul>
+            <li><a href="#sobre">Sobre o hotel</a></li>
+            <li><a href="#quartos">Quartos &amp; Suítes</a></li>
+            <li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#restaurante">Restaurante</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__contact">
+          <h4 class="footer__heading">Contacto</h4>
+          <ul>
+            <li>Moçâmedes, Namibe, Angola</li>
+            <li><a href="tel:+244947478804">+244 947 478 804</a></li>
+            <li><a href="mailto:recepcao.namibe@yonahoteis.com">recepcao.namibe@yonahoteis.com</a></li>
+            <li>@yona.hoteis</li>
+          </ul>
+        </div>
+
+        <div class="footer__reserve">
+          <h4 class="footer__heading">Reserve já</h4>
+          <p>Garanta a sua estadia no coração do Namibe.</p>
+          <a href="#reserva" class="btn btn--gold">Reservar</a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Yona Namibe. Website concept desenvolvido para apresentação.</p>
+        <p class="footer__bottom-sub">Um hotel da rede Yona Hotéis — Angola</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
